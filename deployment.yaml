@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bancario
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: bancario
+  template:
+    metadata:
+      labels:
+        app: bancario
+    spec:
+      containers:
+      - name: bancario
+        image: rayanvictor/python:tagname
+        ports:
+        - containerPort: 5000
