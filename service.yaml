@@ -9,4 +9,5 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 5000
-  type: LoadBalancer
+      nodePort: 30007  # escolha uma porta entre 30000 e 32767
+  type: NodePort
